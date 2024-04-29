@@ -1,0 +1,12 @@
+.blockelement {
+    background-color:rgb(145, 238, 238);
+    padding: 20px;
+    margin-bottom: 20px;
+  }
+  
+  .inlineelement{
+    color:brown;
+    font-weight: bold; 
+    text-decoration: underline;   
+  }
+  
