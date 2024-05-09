@@ -1,60 +1,65 @@
+/* *{  to occupy the space taken on the left and right corners by default
+padding: 0px;
+margin: 0px;
+} */
+
 header {
-    background-color: #cceecd; 
-    padding: 10px 20px; 
-    display: flex;
-    justify-content: space-between; /* horizontally align the items */
-    align-items: center; /*vertically align the items*/
-  }
+  background-color: #cceecd; 
+  padding: 10px 20px; 
+  display: flex;
+  justify-content: space-between; /* horizontally align the items */
+  align-items: center; /*vertically align the items*/
+}
 
 .logo img {
-    width: 115px; 
-    height: auto; /* to maintain the aspect ratio */
-    border-radius: 50%;
-    border: 2px solid green;
-    display: block; 
-  }
-  
+  width: 115px; 
+  height: auto; /* to maintain the aspect ratio */
+  border-radius: 50%;
+  border: 2px solid green;
+  display: block; 
+}
+
 nav ul {
-    list-style-type: none;
-  }
-  
+  list-style-type: none;
+}
+
 nav ul li {
-    display: inline;
-  }
-  
+  display: inline;
+}
+
 nav ul li a {
-    text-decoration: none;
-    padding: 10px 20px; 
-  }
-  
+  text-decoration: none;
+  padding: 10px 20px; 
+}
+
 nav ul li a:hover {
-    background-color: #69cf32; 
-  }
+  background-color: #69cf32; 
+}
 
 .container{
-    display: flex;
-    text-align: center;
+  display: flex;
+  text-align: center;
 }
 .panel{
-    border: 1px solid black;
-    height: 380px;
-    width:250px ;
-    flex: 1; /*allows each box item grow and fill the available space evenly and covers the left to right margin completely.*/
+  border: 1px solid black;
+  height: 380px;
+  width:250px ;
+  flex: 1; /*allows each box item grow and fill the available space evenly and covers the left to right margin completely.*/
 }
 #left_panel{
-    background-color: aqua;
-    display: inline-block;
+  background-color: aqua;
+  display: inline-block;
 }
 #content_panel{
-    background-color: rgb(238, 238, 163);
-    display: inline-block;
+  background-color: rgb(238, 238, 163);
+  display: inline-block;
 }
 #right_panel{
-    background-color:rgb(180, 205, 250);
-    display: inline-block;
+  background-color:rgb(180, 205, 250);
+  display: inline-block;
 }
 footer{
-    background-color:coral;
-    text-align: center;
-    padding: 0.5%;
+  background-color:coral;
+  text-align: center;
+  padding: 1%;
 } 
