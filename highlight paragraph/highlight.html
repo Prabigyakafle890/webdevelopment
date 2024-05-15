@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Highlight paragraph</title>
+    <style>
+        .highlight {
+            background-color: yellow;
+        } 
+
+        /* some extra css */
+       #container1{
+        height: 100%;
+            margin-top: 10%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #container2{
+            width: 50%;
+            background-color: rgb(236, 218, 210);
+            height: 100%;
+            margin-left: 25%;
+            margin-top: 2%;
+            text-align: center;
+        }
+        body{
+            background-color: bisque;
+        }
+    </style>
+</head>
+<body>
+    <div id="container1">
+        <label>
+            <input type="text" id="searchInput" placeholder="Enter text to search">
+            <button onclick="highlightParagraph()">Find</button>
+        </label>
+    </div>
+    <div id="container2">
+        <p id="paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem ea mollitia nobis, necessitatibus perspiciatis eos id corporis quod tenetur accusantium natus officia illum deserunt cumque ad distinctio maiores voluptatibus sequi!
+        Quam fugiat incidunt reprehenderit vel. Temporibus perferendis autem sed, reprehenderit, distinctio, architecto iure nemo doloribus debitis maxime unde nulla eaque ducimus labore facere facilis harum nihil veniam enim necessitatibus. Magni!</p>
+    </div>
+
+    <script>
+        function highlightParagraph() {
+            let input = document.getElementById('searchInput').value;
+            let paragraph = document.getElementById('paragraph');
+            let searchText = "abc";
+
+            if (input.includes(searchText)) {
+                paragraph.classList.add('highlight');
+            } else {
+                paragraph.classList.remove('highlight');
+            }
+        }
+    </script>
+</body>
+</html> 
