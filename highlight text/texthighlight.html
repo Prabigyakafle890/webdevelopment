@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Text Highlight</title>
+<style>
+    .highlight {
+        background-color: yellow;
+    }
+
+    /*some extra css*/
+    #container1{
+        height: 100%;
+            margin-top: 10%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #container2{
+            width: 50%;
+            background-color: rgb(236, 218, 210);
+            height: 100%;
+            margin-left: 25%;
+            margin-top: 2%;
+            text-align: center;
+        }
+        body{
+            background-color: bisque;
+        }
+</style>
+</head>
+<body>
+    <div id="container1">
+        <label>
+            <input type="text" id="searchBox" placeholder="Enter to search text">
+            <button onclick="highlightText()">Find</button>
+        </label>
+     </div>
+
+    <div id="container2">
+        <p id="paragraph">
+            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Temporibus suscipit atque nulla illum deserunt. Eveniet doloremque, tenetur quo sed itaque explicabo fuga minima unde, illo laudantium consequatur ad dolores voluptas?
+            Ipsa ipsam corrupti ab molestias id beatae perspiciatis quia culpa aliquam error. Sint earum laudantium amet quasi magnam atque esse aliquam at expedita quis nesciunt, eum sapiente, quaerat maiores rem?
+        </p>
+    </div>
+    <script>
+        function highlightText() {
+            var searchText = document.getElementById('searchBox').value;
+            var paragraph = document.getElementById('paragraph');
+            var content = paragraph.innerHTML;
+            var regex = new RegExp(searchText, 'gi'); //g = global, i = case-insensitive
+            var highlightedContent = content.replace(regex, function(match) {
+                return '<span class="highlight">' + match + '</span>';
+            });
+            if (highlightedContent === content) { 
+                alert('Searched word is not found.');
+            }
+            paragraph.innerHTML = highlightedContent;
+        }
+    </script>
+</body>
+</html>
