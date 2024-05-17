@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preload</title>
+    <link rel="stylesheet" href="preload.css"> 
+</head>
+<body> 
+    <!--first page-->
+    <div id="page1" class="active">
+        <div id="spinner">
+            <div class="spin"></div>
+            <p>Loading...</p>
+        </div>
+    </div>
+
+    <!--second page-->
+    <div id="page2" class="hidden">
+
+    <!--webpage example-->
+    <header>
+        <div class="logo">
+        <a href="#"><img src="my logo.png" alt="My Logo"></a>
+    </div>
+    <nav>
+        <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#">About us</a></li>
+            <li><a href="#">Contact us</a></li>
+          </ul>
+    </nav>
+    </header>
+    <div class="container">
+    <div id="left_panel" class="panel">LEFT PANEL</div>
+    <div id="content_panel" class="panel">CONTENT PANEL</div>
+    <div id="right_panel" class="panel">RIGHT PANEL</div>
+    </div>
+    <footer>
+        <p>© 2024 | Prapti Ghimire</p>
+    </footer>
+</body>
+</html>
+    </div>
+
+    <script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const page1 = document.getElementById('page1');
+    const page2 = document.getElementById('page2');
+
+    //page 1 with spinner
+    page1.classList.add('active');
+
+    setTimeout(() => {
+        page1.classList.remove('active');
+        page2.classList.add('active');
+    }, 2000); // after a delay of 2 seconds, page 2 is displayed
+});
+    </script>
+</body>
+</html>

@@ -1,0 +1,112 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#page1 {
+    display: none;
+    text-align: center;
+}
+
+
+#page1.active, #page2.active {
+    display: block;
+}
+
+#page2.active{
+    width: 100%;
+    height: 100%;
+}
+
+.hidden {
+    display: none;
+}
+
+.spin {
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid #053c61;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+}
+
+/* make the spinner rotate */
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+#spinner {
+    margin-top: 20px;
+}
+
+
+/* page 2 css */
+
+header {
+  background-color: #cceecd; 
+  padding: 10px 20px; 
+  display: flex;
+  justify-content: space-between; /* horizontally align the items */
+  align-items: center; /*vertically align the items*/
+}
+
+.logo img {
+  width: 115px; 
+  height: auto; /* to maintain the aspect ratio */
+  border-radius: 50%;
+  border: 2px solid green;
+  display: block; 
+}
+
+nav ul {
+  list-style-type: none;
+}
+
+nav ul li {
+  display: inline;
+}
+
+nav ul li a {
+  text-decoration: none;
+  padding: 10px 20px; 
+}
+
+nav ul li a:hover {
+  background-color: #69cf32; 
+}
+
+.container{
+  display: flex;
+  text-align: center;
+}
+.panel{
+  border: 1px solid black;
+  height: 380px;
+  width:250px ;
+  flex: 1; /*allows each box item grow and fill the available space evenly and covers the left to right margin completely.*/
+}
+#left_panel{
+  background-color: aqua;
+  display: inline-block;
+}
+#content_panel{
+  background-color: rgb(238, 238, 163);
+  display: inline-block;
+}
+#right_panel{
+  background-color:rgb(180, 205, 250);
+  display: inline-block;
+}
+footer{
+  background-color:coral;
+  text-align: center;
+  padding: 1%;
+} 
+
