@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery</title>
+</head>
+<body>
+    <script src="/jquery-3.7.1.min.js"></script>
+    <style>
+        #box{
+            height: 200px;
+            width: 200px;
+            background-color: aquamarine;
+        }
+    </style>
+
+<script>
+$(document).ready(function(){
+    $("#hide").click(function(){
+    $("#box").toggle();
+    if(document.getElementById('box').style.display=="none"){
+    $(this).html("show");
+    }
+    else{
+        $(this).html("hide");
+    }
+    });
+});
+</script>
+
+<div id="box"></div>
+<button id="hide">Show/Hide</button>
+</body>
+</html>
