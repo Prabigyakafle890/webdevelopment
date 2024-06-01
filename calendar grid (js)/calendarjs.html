@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calendar</title>
+    <style>
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 8%;
+    background-color: rgb(87, 109, 218);
+}
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(4, 100px);
+    grid-template-rows: repeat(4, 100px);
+    gap: 5px;
+}
+.grid-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+    border: 2px solid rgb(52, 51, 51);
+    font-size: 24px;
+}
+.grid-item:hover{
+    background-color: rgb(255, 219, 174);
+}
+    </style>
+</head>
+<body>
+    <div class="grid-container">
+    </div>
+    <script>
+    document.addEventListener("DOMContentLoaded", function() {
+    const gridContainer = document.querySelector(".grid-container");
+
+    for (let i = 1; i <= 16; i++) {
+        const gridItem = document.createElement("div");
+        gridItem.className = "grid-item";
+        gridItem.textContent = i;
+        gridContainer.appendChild(gridItem);
+     }
+});
+
+    </script>
+</body>
+</html>
